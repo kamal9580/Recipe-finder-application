@@ -1,50 +1,84 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Recipe Finder Application
 
-Currently, two official plugins are available:
+A Recipe Finder application built using **React, Tailwind CSS, and TypeScript**. Users can browse recipes, view details, search for specific recipes, and explore an intuitive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+-   **Home Page**: Displays a list of all recipes with images and tags.
+    
+-   **Recipe Detail Page**: Shows full details of a selected recipe (name, description, tags, ingredients, instructions, and image).
+    
+-   **Search Functionality**: Users can search for recipes by name.
+    
+-   **Responsive Design**: Optimized for both desktop and mobile.
+    
+-   **Loading & Error Handling**: Provides smooth user experience while fetching data.
+    
+-   **Dark Mode**: Users can toggle between light and dark modes.
+    
+-   **Favorites**: Users can bookmark their favorite recipes locally.
+    
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📌 Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+-   **Frontend**: React, TypeScript, Tailwind CSS
+    
+-   **State Management**: React Query (for API calls)
+    
+-   **API**: [DummyJSON Recipes API](https://dummyjson.com/recipes)
+    
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📂 Project Structure
+
+```
+📦 recipe-finder-app
+├── 📁 src
+│   ├── 📁 components    # Reusable components (RecipeCard, Navbar, etc.)
+│   ├── 📁 pages         # Home, RecipeDetails, Search
+│   ├── 📁 api          # API functions (fetching recipes)
+│   ├── 📁 context     
+│   ├── 📁 types    
+│   ├── App.tsx        # Main application component
+│   ├── main.tsx       # Entry point
+│   ├── routes.tsx     # Routes configuration
+├── 📄 package.json     # Project dependencies
+├── 📄 tailwind.config.js # Tailwind CSS configuration
+├── 📄 tsconfig.json    # TypeScript configuration
+├── 📄 README.md        # Project documentation
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## ⚡ Getting Started
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 1️⃣ Clone the Repository
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+git clonehttps://github.com/kamal9580/Recipe-finder-application.git
+```
+
+### 2️⃣ Install Dependencies
+
+```
+npm install  # or yarn install
+```
+
+### 3️⃣ Start the Development Server
+
+```
+npm run dev  # or yarn dev
+```
+
+### 4️⃣ Build for Production
+
+```
+npm run build
+```
+
+## 🔗 API Endpoints Used
+
+-   **Get all recipes**: `GET https://dummyjson.com/recipes`
+    
+-   **Get recipe by ID**: `GET https://dummyjson.com/recipes/{id}`
+    
+-   **Search recipes**: `GET https://dummyjson.com/recipes/search?q={query}`
+    
