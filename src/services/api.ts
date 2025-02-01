@@ -4,7 +4,7 @@ import { Recipe, RecipeResponse } from "../types/recipe"
 
     const API_BASE_URL = 'https://dummyjson.com';
     
- export const api = () => {
+ export const api =  {
       
     getAllRecipes: async (): Promise<RecipeResponse> => {
 
@@ -12,7 +12,7 @@ import { Recipe, RecipeResponse } from "../types/recipe"
 
         return response.data;
 
-    } 
+    } ,
 
     //this getAllRecipes is a aync function which rerun a promise of type reciperespnse
 
@@ -22,7 +22,7 @@ import { Recipe, RecipeResponse } from "../types/recipe"
 
         return response.data;
 
-    }
+    },
 
     searchRecipes: async (query: string): Promise<RecipeResponse> => {
 
