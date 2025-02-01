@@ -6,6 +6,8 @@ import { FavoritesProvider } from './context/FavoritesContext';
 import { Header } from './componenets/Header';
 import { Home } from './Pages/Home';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { RecipeDetail } from './Pages/RecipeDetail';
+import { Favorites } from './Pages/Favorites';
 
 
 
@@ -29,6 +31,8 @@ function App() {
               <Header />
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/recipe/:id" element={<RecipeDetail />} />
+                <Route path="/favorites" element={<Favorites />} />
                
               </Routes>
             </div>
