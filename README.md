@@ -10,6 +10,8 @@ A Recipe Finder application built using **React, Tailwind CSS, and TypeScript**.
 -   **Recipe Detail Page**: Shows full details of a selected recipe (name, description, tags, ingredients, instructions, and image).
     
 -   **Search Functionality**: Users can search for recipes by name.
+
+-   **Pagination**: Implemented pagination for better navigation of recipes.
     
 -   **Responsive Design**: Optimized for both desktop and mobile.
     
